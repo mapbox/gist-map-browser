@@ -22,6 +22,7 @@ function open() {
 
     function loadPage() {
         page('/gists?page=' + p, function(err, res) {
+            if (err) throw err;
             res.filter(isMap).forEach(append);
             appendNext();
         });

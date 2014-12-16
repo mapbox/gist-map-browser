@@ -3,8 +3,9 @@ var request = require('browser-request'),
 
 var base = 'https://api.github.com';
 
-module.exports = function(_) {
+module.exports = function(_, endpoint) {
     token = _;
+    base = endpoint || base;
     return module.exports;
 };
 
@@ -79,7 +80,7 @@ function open() {
 
 function page(postfix, callback) {
     request({
-        uri: 'https://api.github.com' + postfix,
+        uri: base + postfix,
         headers: {
             Authorization: 'token ' + token
         },

@@ -53,9 +53,9 @@ function open() {
     function append(gist) {
         var c = container.appendChild(ce('div', 'gist-map-item'));
         var t = c.appendChild(ce('div', 'gist-map-title'));
-        t.innerHTML = gist.description;
+        t.textContent = gist.description;
         var contents = c.appendChild(ce('div', 'gist-map-contents'));
-        contents.innerHTML = Object.keys(gist.files).join(', ');
+        contents.textContent = Object.keys(gist.files).join(', ');
         c.onclick = function(elem) {
             page('/gists/' + gist.id, function(err, res){
                 onclick(res, elem);

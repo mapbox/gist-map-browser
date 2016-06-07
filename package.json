@@ -1,6 +1,6 @@
 {
   "name": "gist-map-browser",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "browse through your recent mappy gists",
   "main": "index.js",
   "scripts": {

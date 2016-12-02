@@ -1,5 +1,5 @@
 {
-  "name": "gist-map-browser",
+  "name": "@mapbox/gist-map-browser",
   "version": "0.2.1",
   "description": "browse through your recent mappy gists",
   "main": "index.js",
